@@ -1,4 +1,4 @@
-import { StyleSheet} from 'react-native'
+import { Platform, StyleSheet} from 'react-native'
 import { StatusBar } from 'react-native'
 import { colors } from '../Global/Colors'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'

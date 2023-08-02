@@ -1,4 +1,4 @@
-import { FlatList, Pressable, StyleSheet, Text, View, StatusBar } from 'react-native'
+import { FlatList, Pressable, StyleSheet, Text, View, StatusBar, Platform } from 'react-native'
 import React from 'react'
 import CartData from '../Data/cart.json'
 import CartItem from '../Components/CartItem';

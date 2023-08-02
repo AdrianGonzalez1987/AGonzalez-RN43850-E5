@@ -13,6 +13,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { Fontisto } from '@expo/vector-icons'
 import { FontAwesome5 } from '@expo/vector-icons'
 import { MaterialIcons } from '@expo/vector-icons'
+import { Platform } from 'react-native-web'
 
 
 const Tab = createBottomTabNavigator()

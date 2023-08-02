@@ -5,6 +5,7 @@ import { StatusBar } from 'react-native'
 import { colors } from '../Global/Colors'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import OrderScreen from "../Screens/OrderScreen";
+import { Platform } from "react-native";
 
 const Stack = createNativeStackNavigator()
 

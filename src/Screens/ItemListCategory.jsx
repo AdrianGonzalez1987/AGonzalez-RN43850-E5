@@ -5,6 +5,7 @@ import ProductItem from '../Components/ProductItem'
 import { colors } from '../Global/Colors'
 import Search from '../Components/Search'
 import Msn from '../Components/Msn'
+import { useSelector } from 'react-redux'
 
 
 const ItemListCategory = ({
@@ -13,6 +14,8 @@ const ItemListCategory = ({
 }) => {
 
   const {category} = route.params
+
+  const productsSelected = useSelector (state => state.shopReducer.value.productsSelected)
 
   console.log(category);
   const [products, setProducts] = useState([])
@@ -23,10 +26,10 @@ const ItemListCategory = ({
 
   useEffect(()=> {
     //Lógica de manejo de category
-    const productsFiltered = productsRaw.filter(product => product.category === category && product.title.toLocaleLowerCase().includes(keyword.toLowerCase()))
+    const productsFiltered = productsSelected.filter(product =>  product.title.toLocaleLowerCase().includes(keyword.toLowerCase()))
     setProducts(productsFiltered)
 
-  }, [category, keyword])
+  }, [productsSelected, keyword])
 
   const onSearch = (input) => {
     const expression = /^[a-zA-Z0-9\ ]*$/
@@ -99,5 +102,5 @@ const styles = StyleSheet.create({
     }
 })
 
-const onClear = () => { setKeywordError( " ")}
+
 

@@ -1,7 +1,5 @@
-import { StyleSheet, Text, View, Modal, Button, Pressable } from 'react-native'
+import { StyleSheet, Text, View, Modal, Button} from 'react-native'
 import * as React from 'react'
-import Search from './Search'
-import ItemListCategory from '../Screens/ItemListCategory'
 import { BlurView } from 'expo-blur'
 
 export default function Msn({
